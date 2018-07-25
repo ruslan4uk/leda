@@ -2,12 +2,20 @@ import $ from 'jquery';
 import 'owl.carousel';
 
 // Main carousel
-$('.slider__carousel').owlCarousel({
+var slider = $('.slider__carousel');
+slider.owlCarousel({
   loop:true,
   margin:10,
-  nav:false,
+  nav:true,
   items:1,
   dots: true,
+});
+// Custom Navigation Events
+$('.slider__arr--right').click(function() {
+  slider.trigger('next.owl.carousel');
+});
+$('.slider__arr--left').click(function() {
+  slider.trigger('prev.owl.carousel');
 });
 
 // Main product slider
@@ -45,7 +53,7 @@ $(window).on('resize load', function() {
 // Head fixed 
 $(window).scroll(function() {    
   var scroll = $(window).scrollTop();
-  if (scroll >= 300) {
+  if (scroll >= 100) {
     $('.head').addClass('head__shadow');
   } else {
     $('.head').removeClass('head__shadow');

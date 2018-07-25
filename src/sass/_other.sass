@@ -1,0 +1,18 @@
+@import block/left-side
+
+.page
+    margin-bottom: 2rem
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__right
+        width: 100%
+        margin-top: 1rem
+        +rmin($sm)
+            width: calc(100% - 16.375rem)
+            margin-top: 0
+    &__social-btn
+        padding-top: 1.5rem
+        margin-top: 1.5rem
+        border-top: 1px solid #cccccc
