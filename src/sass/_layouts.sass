@@ -1,0 +1,137 @@
+/* Constants */
+$btn: #409bd5
+$btnHover: #256086
+
+$icon: #409bd5
+
+$link: #39464b
+$linkBlue: #409bd5
+$linkHover: #409bd5
+
+$text: #39464b
+
+/* media */
+$xs: 576
+$sm: 768
+$md: 992
+$lg: 1200
+
+
+html, body  
+    font-family: 'MuseoLight'
+    font-size: 15px
+    line-height: 1.4
+    color: $text
+    background: #f9f9f9
+    +rmin($xs)
+        font-size: 16px
+
+*
+    box-sizing: border-box
+
+img 
+    max-width: 100%
+
+a 
+    color: $link
+    text-decoration: none
+    +tr(all ease 0.3s)
+    &:hover
+        color: $linkHover
+
+p 
+    color: #39464b
+    line-height: 1.375rem
+    margin-bottom: 1rem
+
+.icon
+    margin-right: 0.5rem
+    &__svg
+        width: 1rem
+        height: 1.25rem
+        fill: $icon
+        vertical-align: sub
+        &--auth 
+            fill: #8daec2
+
+.container
+    width: 100%
+    max-width: 1170px
+    margin: 0 auto
+    padding: 0 10px
+    +rmin($xs)
+        padding: 0 20px
+
+
+/* btn-big */
+.btn-big
+    background: $btn
+    color: #ffffff
+    text-transform: uppercase
+    font-size: 0.875rem
+    font-family: 'MuseoMedium'
+    padding: 0.825rem 3.25rem 0.825rem 1.25rem
+    display: inline-block
+    position: relative
+    +rmin($sm)
+        padding: 1rem 3.75rem 1rem 1.75rem
+    &:hover
+        background: $btnHover
+        color: #ffffff
+        &:after
+            transform: translateX(0.5rem)
+    &:after
+        position: absolute
+        right: 1.75rem
+        top: calc(50% - 0.4125rem)
+        width: 0.75rem
+        height: 1.25rem
+        content: ' '
+        background: url(../img/arr-right.svg) no-repeat
+        background-size: contain
+        opacity: 0.8
+        +tr(transform ease 0.3s)
+    &--white
+        background: #ffffff
+        color: $btn
+        &:hover
+            background: $btnHover
+            color: #ffffff
+        &:after
+            background: url(../img/arr-right-blue.svg) no-repeat
+            background-size: contain
+
+
+/* subnav */
+.subnav
+    display: none
+    +rmin($md)
+        display: block
+    &--footer &__item
+        margin-bottom: 0.25rem
+    &--footer &__link
+        color: #e5edf0
+        text-decoration: none
+        border-bottom: 1px solid rgba(255,255,255,0.6)
+        +tr(all ease 0.2s)
+        &:hover
+            border-bottom: 1px solid transparent
+
+/* action-nav */
+.action-nav
+    &__list
+        display: flex
+        flex-wrap: wrap
+        flex-direction: row
+    &__item
+        flex-grow: 1
+        flex: 1
+    &__link
+        width: 100%
+        padding: .775rem
+        white-space: nowrap
+        &:after
+            display: none
+            +rmin($sm)
+                display: block
+    

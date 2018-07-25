@@ -1,0 +1,71 @@
+.top
+    background: #ededed
+    padding-top: 7.375rem
+    &__wrap
+        display: flex
+    &__search
+        flex-basis: 100%
+    &__fcart
+        display: none
+        +rmin($sm)
+            display: block
+
+/* search */
+.search
+    height: 100%
+    position: relative
+    &__input
+        font-size: 0.875rem
+        padding: 0.875rem 1.5rem 0.875rem 1rem
+        border: 0
+        height: 100%
+        width: 100%
+        +rmin($sm)
+            padding: 1rem 1.5rem 1rem 4rem
+    &__submit
+        position: absolute
+        right: 1.5rem
+        top: calc(50% - 0.75rem)
+        background: url(../img/search.svg) no-repeat 
+        background-size: contain
+        width: 1.375rem
+        height: 1.5rem
+        +rmin($sm)
+            left: 1.5rem
+            right: auto
+
+
+
+/* fcart */
+.fcart
+    height: 100%
+    display: flex
+    background: #e6e6e6
+    align-items: center
+    &__btn
+        height: 100%
+        padding: 0.75rem 0.875rem 0.5rem 0.875rem
+        +rmin($sm)
+            padding: 0.75rem 1rem
+        display: flex
+        align-content: center
+        align-items: center
+        position: relative
+        +tr(all ease 0.3s)
+        &:hover 
+            background: $btn
+            color: #ffffff
+            fill: #ffffff
+    &__hr
+        width: 1px
+        height: 1.5rem
+        background: #cccccc
+    &__icon
+        width: 1.125rem
+        height: 1.125rem
+    &__name
+        font-size: 0.875rem
+        font-family: 'MuseoMedium'
+        margin-bottom: 0.125rem
+        margin-left: 0.5rem
+        white-space: nowrap

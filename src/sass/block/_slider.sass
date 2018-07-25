@@ -1,0 +1,44 @@
+@import ../lib/owl
+
+.slider
+    display: none
+    +rmin($sm)
+        display: block
+    &__item
+        background-size: cover
+    &__content
+        height: 30rem
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+    &__text 
+        margin-bottom: 2rem
+        & p
+            color: #ffffff
+            line-height: 1.3
+            background: rgba(0,0,0,.5)
+            padding: 1.5rem 2.5rem
+            font-size: 2.188rem
+            font-family: 'MuseoBold'
+
+.owl-carousel 
+    & .owl-dots
+        position: absolute
+        bottom: 2rem
+        width: 100%
+        display: flex
+        justify-content: center
+        & .owl-dot
+            margin: 0 0.3rem
+            background: none
+            & span
+                display: block
+                width: 12px
+                height: 12px
+                background: #cccccc
+                border-radius: 50%
+                +tr(all ease 0.2s)
+            &.active span 
+                background: #ffffff
+                width: 16px
+                height: 16px

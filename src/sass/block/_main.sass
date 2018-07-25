@@ -1,0 +1,120 @@
+/* advantages */
+.advantages
+    margin: 2rem 0
+    padding: 1rem 0
+    box-shadow: 0 0 50px 1px rgba(0,0,0,.06)
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+    &__item
+        display: flex
+        align-items: center
+        padding: 0.5rem 1rem 0.5rem 0
+        width: 50%
+        +rmin($md)
+            width: 25%
+        & i 
+            width: 3rem
+            margin-right: 1rem
+    &__text
+        color: #38454a
+        font-family: 'MuseoBold'
+
+/* content */
+.content
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin: 3.5rem 0
+    &__col
+        width: 100%
+        &--2col
+            width: 100%
+            +rmin($md)
+                width: calc(50% - 2rem)
+
+    &__list
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin: 1rem 0
+    &__item
+        width: 100%
+        padding-left: 1.5rem
+        position: relative
+        margin: 1rem 0
+        +rmin($xs)
+            width: calc(50% - 1rem)
+        +rmin($md)
+            width: calc(25% - 1rem)
+        &:after
+            position: absolute
+            top: 0.325rem
+            left: 0
+            content: ' '
+            width: 12px
+            height: 12px
+            background: $btn
+            border-radius: 50%
+            border: 3px solid #ffffff
+            box-shadow: 0 0 15px 0 $btn
+
+    &__title
+        font-size: 1.563rem
+        margin-bottom: 1.5rem
+    &__subtitle
+        font-size: 1.25rem
+        margin-bottom: 1.25rem
+    &__bold
+        font-family: 'MuseoMedium'
+    
+/* main-product */
+.main-product
+    margin: 1.5rem 0 0 0
+    +rmin($sm)
+        margin: 3rem 0
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__nav
+        width: 100%
+        +rmin($sm)
+            width: 14.375rem
+    &__carousel
+        width: calc(100% - 16rem)
+        display: none !important
+        +rmin($sm)
+            display: block !important
+    &__cnav
+        width: 100%
+        margin-bottom: 2.813rem
+        display: none
+        +rmin($sm)
+            display: block
+
+.cnav
+    display: flex
+    justify-content: center
+    &__arr
+        padding: 0.5rem 0.75rem
+        background: #dedede
+        display: flex
+        align-content: center
+        align-items: center
+        border-radius: 2px
+        opacity: 0.5
+        +tr(opacity ease 0.2s)
+        &:hover
+            opacity: 1
+        &--right
+            transform: rotate(180deg)
+    &__icon
+        width: 1.75rem
+        height: 1.25rem
+        fill: #61696d
+    &__title
+        font-size: 1.563rem
+        font-family: 'MuseoBold'
+        padding: 0 2.813rem
