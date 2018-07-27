@@ -46,6 +46,10 @@ p
     line-height: 1.375rem
     margin-bottom: 1rem
 
+.overflow
+    max-width: 100%
+    overflow-x: scroll
+
 .icon
     margin-right: 0.5rem
     &__svg
@@ -172,3 +176,165 @@ p+img
         & a 
             text-decoration: underline
             font-size: 0.875rem
+
+/* badges */
+.badges
+    position: absolute
+    top: 0.5rem
+    left: 0.5rem
+    &__list
+        display: flex
+        flex-wrap: wrap
+    &__item
+        margin-right: 1rem
+        background-size: contain
+        background-repeat: no-repeat
+        font-size: 0.875rem
+        color: #ffffff
+        padding: 0.5rem
+        display: flex
+        align-items: center
+        justify-content: center
+        width: 3.5rem
+        height: 3.5rem
+        font-family: 'MuseoMedium'
+        &--sale 
+            background-image: url(../img/sticker.svg)
+
+
+/* fcart */
+.fcart
+    &--product
+        background: transparent
+    height: 100%
+    display: flex
+    background: #e6e6e6
+    align-items: center
+    &__btn
+        height: 100%
+        padding: 0.75rem 0.875rem 0.5rem 0.875rem
+        +rmin($sm)
+            padding: 0.75rem 1.25rem
+        display: flex
+        align-content: center
+        align-items: center
+        position: relative
+        background: #e6e6e6
+        +tr(all ease 0.3s)
+        &:hover 
+            background: $btn
+            color: #ffffff
+            fill: #ffffff
+        &--product
+            margin-right: 1rem
+            background: $btn
+            color: #ffffff
+            fill: #ffffff
+            &:hover
+                background: $btnHover
+    &__hr
+        width: 1px
+        height: 1.5rem
+        background: #cccccc
+    &__icon
+        width: 1.125rem
+        height: 1.125rem
+    &__name
+        font-size: 0.875rem
+        font-family: 'MuseoMedium'
+        margin-bottom: 0.125rem
+        margin-left: 0.5rem
+        white-space: nowrap
+
+/* btn */
+.btn-icon
+    height: 100%
+    +rmin($sm)
+    padding: 0.5rem 0.75rem 0.375rem 0.75rem
+    display: inline-block
+    position: relative
+    background: $btn
+    color: #ffffff
+    fill: #ffffff
+    white-space: nowrap
+    +tr(all ease 0.3s)
+    &:hover 
+        background: $btnHover
+        color: #ffffff
+        fill: #ffffff
+    & i 
+        display: inline-block
+    &__icon
+        width: 1.125rem
+        height: 1.125rem
+    &__name
+        font-size: 0.875rem
+        font-family: 'MuseoMedium'
+        margin-bottom: 0.125rem
+        margin-left: 0.5rem
+        white-space: nowrap
+        vertical-align: text-bottom
+        display: inline-block
+
+.btn-trash
+    &__icon
+        width: 1.5rem
+        height: 1.5rem
+        fill: #c02323
+
+/* Form */
+.form
+    &__group
+        margin-bottom: 1.5rem
+        width: 100%
+        max-width: 30rem
+    &__label
+        font-size: 0.875rem
+        width: 100%
+        margin-bottom: 0.125rem
+    &__input[type="text"]
+        font-size: 1rem
+        padding: 0.5rem 0.5rem
+        border: 1px solid #cecece
+        width: 100%
+    &__btn
+        background: $btn
+        color: #ffffff
+        padding: 0.625rem 2rem
+        font-size: 0.875rem
+        &:hover
+            background: $btnHover
+
+
+/* Table */
+.stable
+    & thead
+        border-bottom: 1px solid #cccccc
+        & td 
+            padding: 0.75rem 0
+            white-space: nowrap
+    & tr 
+        border-bottom: 1px solid #cccccc
+        &:last-child
+            border: 0
+        & td 
+            text-align: center
+            padding: 0.5rem 0.5rem
+            font-size: 0.875rem
+            vertical-align: middle
+            &:last-child
+                text-align: right
+            &:first-child
+                text-align: left
+            & img 
+                max-width: 8rem
+    &__title
+        text-decoration: underline
+        font-family: 'MuseoBold'
+    &__remain
+        color: #555555
+        white-space: nowrap
+    &__price
+        white-space: nowrap
+        font-family: 'MuseoBold'
+    

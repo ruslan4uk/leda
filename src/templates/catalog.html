@@ -1,0 +1,18 @@
+---
+title: Каталог
+---
+{% extends "layouts/_other.html" %}
+
+{% block content %}
+
+<h1 class="title">Каталог</h1>
+
+{% include "partials/catalog/_filter.html" %}
+
+<div class="catalog">
+    {% include "partials/catalog/_product-item-full.html" %}
+    {% include "partials/catalog/_product-item-full.html" %}
+    {% include "partials/catalog/_product-item-full.html" %}
+</div>
+
+{% endblock %}

@@ -1,5 +1,21 @@
 ProjectTitle: leda-tkani
 
 PageList:
-- file: page.html
+- file: main.html
+  ready: 50
+- file: news.html
+  ready: 50
+- file: text.html
+  ready: 50
+- file: catalog.html
+  ready: 50
+- file: product.html
+  ready: 50
+- file: lk-contact.html
+  ready: 50
+- file: lk-favorite.html
+  ready: 50
+- file: lk-index.html
+  ready: 50
+- file: lk-repass.html
   ready: 50

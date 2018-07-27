@@ -1,0 +1,100 @@
+@import ../../lib/selectric
+
+.filter
+    margin-bottom: 1.5rem
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    z-index: 2
+    &__s
+        position: relative
+        padding: 0.375rem 0.75rem
+        background: #edf2f5
+        width: calc(50% - 1rem)
+        +rmin($md)
+            padding: 0.5rem 1rem
+            width: 100%
+            display: flex
+            flex-wrap: wrap
+            align-items: center
+            background: #ffffff
+            margin-bottom: 2px
+    &__slist
+        flex-wrap: wrap
+        display: none
+        position: absolute
+        background: #edf2f5
+        left: 0
+        width: 100%
+        margin-top: 1rem
+        min-width: 15rem
+        box-shadow: 0px 10px 16px 1px rgba(0,0,0,.1)
+        +rmin($md)
+            margin-top: 0
+            box-shadow: none
+            background: transparent
+            position: inherit
+            display: flex
+            width: auto
+    &__stitle
+        color: $linkBlue
+        font-size: 0.875rem
+        padding: 0.5rem
+        cursor: pointer
+    &__sbtn
+        padding: 0.75rem 1.5rem 
+        background: #edf2f5
+        font-size: 0.875rem
+        width: 100%
+        +rmin($md)
+            padding: 0.5rem 2rem
+            margin-left: 1.5rem
+            margin: 0.5rem
+            width: auto
+        &:hover, &.active
+            background: $linkBlue
+            color: #ffffff
+
+
+
+    &__f
+        background: #edf2f5
+        width: calc(50% - 1rem)
+        padding: 0.375rem 0.75rem
+        +rmin($md)
+            padding: 0.5rem 1rem
+            width: 100%
+            background: #ffffff
+    &__ftitle
+        font-size: 0.875rem
+        padding: 0.5rem
+        color: $linkBlue
+        cursor: pointer
+        +rmin($md)
+            display: none
+    &__flist
+        position: absolute
+        background: #edf2f5
+        margin-top: 1rem
+        box-shadow: 0px 6px 24px 1px rgba(0,0,0,.1)
+        left: 0
+        flex-wrap: wrap
+        display: none
+        +rmin($md)
+            box-shadow: none
+            margin-top: 0
+            background: transparent
+            position: inherit
+            display: flex
+    &__fitem
+        width: 50%
+        padding: 0.5rem
+        +rmin($md)
+            width: calc(33%)
+        +rmin($lg)
+            width: calc(25%)
+
+
+    &__is-open
+        display: flex

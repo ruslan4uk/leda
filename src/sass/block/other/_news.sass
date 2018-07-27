@@ -1,0 +1,39 @@
+.news
+    +rmin($sm)
+        margin-top: 2rem
+    &__item
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding-bottom: 2rem
+        margin-bottom: 2rem
+        border-bottom: 1px solid #ececec
+        &:last-child
+            border: 0
+            padding-bottom: 0
+            margin-bottom: 0
+    &__img
+        width: 100%
+        margin-top: 0.25rem
+        display: block
+        margin-bottom: 1rem
+        +rmin($sm)
+            width: 12.5rem
+    &__pc
+        width: 100%
+        +rmin($sm)
+            width: calc(100% - 14.5rem)
+    &__title
+        font-size: 1.125rem
+        font-family: 'MuseoBold'
+        margin-bottom: 0.5rem
+        display: block
+    &__title+.date
+        margin-bottom: 0.5rem
+    &__more+p 
+        margin-bottom: 0.5rem
+    &__more
+        padding: 0.5rem 1rem
+        font-size: 0.875rem
+        background: #eeeeee
+        display: inline-block

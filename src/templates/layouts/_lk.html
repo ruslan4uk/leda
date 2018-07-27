@@ -24,16 +24,19 @@
     {% include "../partials/_breadcrumb.html" %}
     {# END breadcrumb panel #}
 
-    <section class="page">
+    <section class="lk">
         <div class="container">
-            <div class="page__wrap">
-                {# BEGIN left-side panel #}
-                {% include "../partials/_left-side.html" %}
-                {# END left-side panel #}
-                <div class="page__right">
+            <h1 class="title">{{ title }}</h1>
+            <div class="lk__wrap">
+                <div class="lk__left">
                     <!-- BEGIN content -->
                     {% block content %}{% endblock %}
                     <!-- END content -->
+                </div>
+                <div class="lk__right">
+                    {# BEGIN left-side panel #}
+                    {% include "partials/lk/_right-side.html" %}
+                    {# END left-side panel #}
                 </div>
             </div>
         </div>

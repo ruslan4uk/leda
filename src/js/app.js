@@ -1,5 +1,30 @@
 import $ from 'jquery';
 import 'owl.carousel';
+import 'selectric';
+
+
+
+// Function hide open menu
+$(window).on('click touchstart', function() {
+  let openedClass = 'filter__is-open';
+  if ($(this.event.target).hasClass('js--filter-open')) {
+    if($(this.event.target).next().is(':hidden')) {
+      $('body').find('.filter__is-open').removeClass('filter__is-open');
+      $(this.event.target).next().addClass(openedClass);
+    } else {
+      $('body').find('.filter__is-open').removeClass('filter__is-open');
+    }
+  } else {
+    $('body').find('.filter__is-open').removeClass('filter__is-open');
+  }
+});
+$('.filter__slist, .filter__flist').on('click touchstart', function(e) {
+  e.stopPropagation();
+});
+
+
+// Select selectric jquery custom style
+$('.filter__select').selectric();
 
 // Main carousel
 var slider = $('.slider__carousel');
@@ -19,7 +44,7 @@ $('.slider__arr--left').click(function() {
 });
 
 // Main product slider
-var owl = $('.main-product__carousel');
+var owl = $('.js--product-carousel');
 owl.owlCarousel({
   loop:true,
   margin:10,
@@ -28,10 +53,10 @@ owl.owlCarousel({
     0:{
       items:1
     },
-    600:{
-      items:3
+    576:{
+      items:2
     },
-    1000:{
+    992:{
       items:4
     }
   }
