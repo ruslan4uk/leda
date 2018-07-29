@@ -1,6 +1,10 @@
 .footer
     background: #3a4247
     padding: 2rem 0
+    & .list a, & a
+        color: #e5edf0
+        &:hover
+            color: #ffffff
     &__wrap
         display: flex
         justify-content: space-between
@@ -14,16 +18,7 @@
         display: none
         +rmin($sm)
             display: block
-    &__item
-        margin-bottom: 0.125rem
-    &__link
-        color: #e5edf0
-        text-decoration: none
-        border-bottom: 1px solid rgba(255,255,255,0.6)
-        +tr(all ease 0.2s)
-        &:hover
-            color: #ffffff
-            border-bottom: 1px solid transparent
+    
     &__contact
         display: none
         +rmin($lg)
@@ -43,28 +38,3 @@
         color: #e5edf0
         margin-bottom: 0.125rem
         font-family: 'MuseoMedium'
-
-    &__social
-        display: flex
-        align-items: center
-        align-content: center
-        justify-content: flex-end
-        margin-top: 0.75rem
-        & p 
-            color: #e5edf0
-            margin-bottom: 0
-            display: none
-            +rmin($xs)
-                display: block
-        &-link 
-            display: inline-flex
-            margin-left: 0.5rem
-            padding: 0.5rem
-            fill: #e5edf0
-            background: #4c5b65
-            +tr(opacity ease 0.2s)
-            &:hover
-                opacity: 0.5
-        &-svg 
-            width: 14px
-            height: 14px

@@ -4,8 +4,21 @@ import 'selectric';
 import 'jquery-sticky';
 import 'remodal';
 
-// Function hide open menu
+
 var clickEventType=((document.ontouchstart!==null)?'click':'touchstart');
+// Mmenu
+$('.js--mmenu-open, .js--menu-open span').on(clickEventType, function(e) {
+  $('.js--mmenu').addClass('mmenu__is-opened');
+  $('body').css('overflow','hidden');
+  return false;
+});
+$('.js--mmenu-close').on(clickEventType, function(e) {
+  $('.js--mmenu').removeClass('mmenu__is-opened');
+  $('body').css('overflow','auto');
+  return false;
+});
+
+// Function hide open menu
 $(window).on(clickEventType, function() {
   let openedClass = 'filter__is-open';
   if ($(this.event.target).hasClass('js--filter-open')) {

@@ -334,6 +334,43 @@ p+img
         margin-right: 2rem
         color: $linkBlue
 
+/* list */
+.list
+    & li
+        margin-bottom: 0.125rem
+    & li a
+        color: $link
+        text-decoration: none
+        border-bottom: 1px solid rgba(255,255,255,0.6)
+        +tr(all ease 0.2s)
+        &:hover
+            color: $linkHover
+            border-bottom: 1px solid transparent
+
+.social-btn
+    display: flex
+    align-items: center
+    align-content: center
+    justify-content: flex-end
+    margin-top: 0.75rem
+    & p 
+        color: #e5edf0
+        margin-bottom: 0
+        display: none
+        +rmin($xs)
+            display: block
+    &__link 
+        display: inline-flex
+        margin-left: 0.5rem
+        padding: 0.5rem
+        fill: #e5edf0
+        background: #4c5b65
+        +tr(opacity ease 0.2s)
+        &:hover
+            opacity: 0.5
+    &__svg 
+        width: 14px
+        height: 14px
 
 /* Table */
 .stable
@@ -471,3 +508,99 @@ p+img
         height: 1.25rem
         fill: #409bd5
         vertical-align: bottom
+
+
+/* mobile-menu (mmenu) */
+.mmenu
+    width: 87%
+    max-width: 25rem
+    overflow-y: scroll
+    height: 100%
+    position: fixed
+    top: 0
+    left: 0
+    z-index: 15
+    background: #f6f6f6
+    transform: translateX(-26rem)
+    +tr(transform ease 0.2s)
+    &__is-opened
+        box-shadow: 0 0 150px 10px rgba(0,0,0,.35)
+        transform: translateX(0)
+        +rmin($sm)
+            box-shadow: none
+            transform: translateX(-26rem)
+    &__top
+        display: flex
+        align-content: center
+        align-items: center
+        padding: 1.5rem 1rem 1rem 1rem
+        position: relative
+    &__logo
+        max-width: 5rem
+        margin-top: 0.25rem
+    &__phone
+        margin-left: 1.5rem !important
+    
+    &__auth
+        //margin-top: 0 !important
+        padding: 0.75rem 0
+        text-align: left !important
+        background: #ffffff
+        border-top: 1px solid #dddddd
+        border-bottom: 1px solid #dddddd
+    &__nav
+        padding: 1.25rem
+        margin: 1.5rem 1.75rem 0
+        background: #ffffff
+        border: 1px solid #dddddd
+        & .list
+            margin-left: 1.75rem
+    &__subnav
+        display: block
+    &__city
+        padding: 0rem 3.125rem
+        margin-top: 1.5rem
+        display: flex
+    &__city-select
+        background: #ffffff
+        border: 1px solid #dddddd
+        padding: 1rem
+        text-align: center
+    &__mail
+        padding: 0rem 3.125rem
+        display: flex
+    &__social
+        display: flex
+        justify-content: center
+        background: #ffffff
+        border: 1px solid #dddddd
+        padding: 1rem
+        margin-top: 3.5rem
+        & p 
+            color: $text
+
+
+    &__close
+        left: auto
+        right: 1rem
+        top: 0.75rem
+        height: 40px
+        width: 40px
+        display: block
+        position: absolute
+        &:before
+            position: absolute
+            display: block
+            width: 35px
+            font-family: 'MuseoLight'
+            font-size: 40px
+            line-height: 40px
+            content: "\00d7"
+            text-align: center
+            left: auto
+            right: 0
+            top: 0
+            height: 40px
+            color: $linkBlue
+
+
