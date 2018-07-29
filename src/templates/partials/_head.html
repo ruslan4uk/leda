@@ -1,4 +1,4 @@
-<section class="head">
+<section class="head" data-sticky-container data-sticky-class="is-sticky" data-sticky-wrap>
     <div class="container">
         <div class="head__wrap">
             <div class="head__left">
@@ -40,12 +40,12 @@
             <div class="head__city">
                 <div class="city-select">
                     <div class="city-select__mtitle">Ваш регион:</div>
-                    <div class="city-select__select">
+                    <a class="city-select__select" href="#select-city">
                         Набережные челны
                         <svg class="city-select__arr">
                             <use xlink:href="img/sprite.svg#icon-arrow"></use>
                         </svg>
-                    </div>
+                    </a>
                     <div class="city-select__contact">
                         <i class="icon">
                             <svg class="icon__svg">
@@ -89,7 +89,7 @@
                     </div>
                 </div>
                 <div class="head__auth">
-                    <a href="" class="head__login">
+                    <a href="#auth" class="head__login">
                         <i class="icon">
                             <svg class="icon__svg icon__svg--auth">
                                 <use xlink:href="img/sprite.svg#icon-login"></use>
@@ -97,7 +97,7 @@
                         </i>
                         Вход
                     </a>
-                    <a href="" class="head__reg">
+                    <a href="#reg" class="head__reg">
                          <i class="icon">
                             <svg class="icon__svg icon__svg--auth">
                                 <use xlink:href="img/sprite.svg#icon-reg"></use>

@@ -4116,7 +4116,13 @@ jest-validate@^23.0.0:
     leven "^2.1.0"
     pretty-format "^23.2.0"
 
-jquery@>=1.8.3, jquery@^3.1.1:
+jquery-sticky@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/jquery-sticky/-/jquery-sticky-1.0.4.tgz#2fe8d03dc904685340daa12cbdd1ca0c921b09ac"
+  dependencies:
+    jquery "*"
+
+jquery@*, jquery@>=1.8.3, jquery@^3.1.1:
   version "3.3.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
@@ -6088,6 +6094,12 @@ regjsparser@^0.1.4:
   dependencies:
     jsesc "~0.5.0"
 
+remodal@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/remodal/-/remodal-1.1.1.tgz#00f580b09417b2b7e7a425b17327ec10f3d596c3"
+  dependencies:
+    jquery "*"
+
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/remove-trailing-separator/-/remove-trailing-separator-1.1.0.tgz#c24bce2a283adad5bc3f58e0d48249b92379d8ef"
@@ -6738,6 +6750,10 @@ stdout-stream@^1.4.0:
   resolved "https://registry.yarnpkg.com/stdout-stream/-/stdout-stream-1.4.0.tgz#a2c7c8587e54d9427ea9edb3ac3f2cd522df378b"
   dependencies:
     readable-stream "^2.0.1"
+
+sticky-js@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/sticky-js/-/sticky-js-1.2.0.tgz#da54ece034cc906646fca8c36bc7b5f48eec55e2"
 
 stream-browserify@^2.0.1:
   version "2.0.1"

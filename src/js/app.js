@@ -1,11 +1,12 @@
 import $ from 'jquery';
 import 'owl.carousel';
 import 'selectric';
-
-
+import 'jquery-sticky';
+import 'remodal';
 
 // Function hide open menu
-$(window).on('click touchstart', function() {
+var clickEventType=((document.ontouchstart!==null)?'click':'touchstart');
+$(window).on(clickEventType, function() {
   let openedClass = 'filter__is-open';
   if ($(this.event.target).hasClass('js--filter-open')) {
     if($(this.event.target).next().is(':hidden')) {
@@ -31,7 +32,7 @@ var slider = $('.slider__carousel');
 slider.owlCarousel({
   loop:true,
   margin:10,
-  nav:true,
+  nav:false,
   items:1,
   dots: true,
 });
@@ -70,18 +71,26 @@ $('.cnav__arr--left').click(function() {
   owl.trigger('prev.owl.carousel');
 });
 
+
 $(window).on('resize load', function() {
-  let height = $('.head').outerHeight();
-  $('.top').css('padding-top',height);
+  if($(this).outerWidth() <= 768) {
+    $('.head').sticky({topSpacing:0,className:'head__sticky',zIndex:'11'});
+    $('.top').unstick();
+  } else {
+    $('.top').sticky({topSpacing:0,className:'top__sticky',zIndex:'10'});
+    $('.head').unstick();
+  }
+  $('.top').sticky('update');
+  $('.head').sticky('update');
 });
+
 
 // Head fixed 
 $(window).scroll(function() {    
   var scroll = $(window).scrollTop();
-  if (scroll >= 100) {
-    $('.head').addClass('head__shadow');
+  if (scroll >= 120) {
+    $('.head, .top').addClass('head__shadow');
   } else {
-    $('.head').removeClass('head__shadow');
+    $('.head, .top').removeClass('head__shadow');
   }
 });
-

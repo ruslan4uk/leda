@@ -4,12 +4,14 @@
     <meta charset="utf-8" />
     <title>Index page</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
     <link rel="stylesheet" media="all" href="css/app.css" /> </head>
   <body>
-    <section class="head">
+    <section class="head" data-sticky-container data-sticky-class="is-sticky" data-sticky-wrap>
       <div class="container">
         <div class="head__wrap">
           <div class="head__left">
@@ -46,11 +48,11 @@
           <div class="head__city">
             <div class="city-select">
               <div class="city-select__mtitle">Ваш регион:</div>
-              <div class="city-select__select"> Набережные челны
+              <a class="city-select__select" href="#select-city"> Набережные челны
                 <svg class="city-select__arr">
                   <use xlink:href="img/sprite.svg#icon-arrow"></use>
                 </svg>
-              </div>
+              </a>
               <div class="city-select__contact">
                 <i class="icon">
                   <svg class="icon__svg">
@@ -91,13 +93,13 @@
               </div>
             </div>
             <div class="head__auth">
-              <a href="" class="head__login">
+              <a href="#auth" class="head__login">
                 <i class="icon">
                   <svg class="icon__svg icon__svg--auth">
                     <use xlink:href="img/sprite.svg#icon-login"></use>
                   </svg>
                 </i> Вход </a>
-              <a href="" class="head__reg">
+              <a href="#reg" class="head__reg">
                 <i class="icon">
                   <svg class="icon__svg icon__svg--auth">
                     <use xlink:href="img/sprite.svg#icon-reg"></use>
@@ -127,7 +129,7 @@
         </div>
       </div>
     </section>
-    <section class="top">
+    <section class="top" data-sticky-container data-sticky-wrap data-sticky-class="is-sticky">
       <div class="container">
         <div class="top__wrap">
           <div class="top__catalog">
@@ -204,7 +206,7 @@
     </section>
     <!-- BEGIN content -->
     <h1>Index page</h1>
-    <section class="head">
+    <section class="head" data-sticky-container data-sticky-class="is-sticky" data-sticky-wrap>
       <div class="container">
         <div class="head__wrap">
           <div class="head__left">
@@ -241,11 +243,11 @@
           <div class="head__city">
             <div class="city-select">
               <div class="city-select__mtitle">Ваш регион:</div>
-              <div class="city-select__select"> Набережные челны
+              <a class="city-select__select" href="#select-city"> Набережные челны
                 <svg class="city-select__arr">
                   <use xlink:href="img/sprite.svg#icon-arrow"></use>
                 </svg>
-              </div>
+              </a>
               <div class="city-select__contact">
                 <i class="icon">
                   <svg class="icon__svg">
@@ -286,13 +288,13 @@
               </div>
             </div>
             <div class="head__auth">
-              <a href="" class="head__login">
+              <a href="#auth" class="head__login">
                 <i class="icon">
                   <svg class="icon__svg icon__svg--auth">
                     <use xlink:href="img/sprite.svg#icon-login"></use>
                   </svg>
                 </i> Вход </a>
-              <a href="" class="head__reg">
+              <a href="#reg" class="head__reg">
                 <i class="icon">
                   <svg class="icon__svg icon__svg--auth">
                     <use xlink:href="img/sprite.svg#icon-reg"></use>
@@ -328,6 +330,171 @@
     <li>Item1</li>
     <li>Item2</li>
     <!-- END content -->
+    <div class="remodal" data-remodal-id="select-city">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal__title">Выбор города</div>
+      <div class="remodal__content">
+        <div class="remodal__city">
+          <ul class="remodal__list">
+            <li class="remodal__item">
+              <a href="#">Москва</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Ижевск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Киров</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Санкт Петербург</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Нижний Новгород</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Тюмень</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Челябинск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Омск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Москва</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Ижевск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Киров</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Санкт Петербург</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Нижний Новгород</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Тюмень</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Челябинск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Омск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Москва</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Ижевск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Киров</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Санкт Петербург</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Нижний Новгород</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Тюмень</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Челябинск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Омск</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="remodal__footer">
+        <i class="remodal__ficon">
+          <svg class="remodal__svg">
+            <use xlink:href="img/sprite.svg#icon-box"></use>
+          </svg>
+        </i>
+        <span>Доставляем заказы быстро и качественно</span>
+      </div>
+    </div>
+    <div class="remodal remodal--min" data-remodal-id="auth">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal__title">Вход</div>
+      <div class="remodal__content">
+        <form action="#" class="form">
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Логин</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Пароль</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group form__group--center">
+            <button type="submit" class="form__btn">Войти</button>
+          </div>
+        </form>
+      </div>
+      <div class="remodal__footer remodal__footer--center">
+        <span>Отправляя форму вы соглашаетесь с
+          <a href="#">Политикой конфиденциальности</a>
+        </span>
+      </div>
+    </div>
+    <div class="remodal remodal--min" data-remodal-id="reg">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal__title">Регистрация</div>
+      <div class="remodal__content">
+        <form action="#" class="form">
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Логин</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Email</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group form__group--center">
+            <a href="#repass" class="form__repass">Забыли пароль?</a>
+            <button type="submit" class="form__btn">Регистрация</button>
+          </div>
+        </form>
+      </div>
+      <div class="remodal__footer remodal__footer--center">
+        <span>Отправляя форму вы соглашаетесь с
+          <a href="#">Политикой конфиденциальности</a>
+        </span>
+      </div>
+    </div>
+    <div class="remodal remodal--min" data-remodal-id="repass">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal__title">Восстановление пароля</div>
+      <div class="remodal__content">
+        <form action="#" class="form">
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Email</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group form__group--center">
+            <a href="#auth" class="form__repass">Вход</a>
+            <button type="submit" class="form__btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+      <div class="remodal__footer remodal__footer--center">
+        <span>Отправляя форму вы соглашаетесь с
+          <a href="#">Политикой конфиденциальности</a>
+        </span>
+      </div>
+    </div>
     <section class="footer">
       <div class="container">
         <div class="footer__wrap">

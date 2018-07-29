@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <title>Корзина</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="theme-color" content="#fff" />
     <meta name="format-detection" content="telephone=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.1.1/remodal-default-theme.min.css">
     <link rel="stylesheet" media="all" href="css/app.css" /> </head>
   <body>
-    <section class="head">
+    <section class="head" data-sticky-container data-sticky-class="is-sticky" data-sticky-wrap>
       <div class="container">
         <div class="head__wrap">
           <div class="head__left">
@@ -46,11 +47,11 @@
           <div class="head__city">
             <div class="city-select">
               <div class="city-select__mtitle">Ваш регион:</div>
-              <div class="city-select__select"> Набережные челны
+              <a class="city-select__select" href="#select-city"> Набережные челны
                 <svg class="city-select__arr">
                   <use xlink:href="img/sprite.svg#icon-arrow"></use>
                 </svg>
-              </div>
+              </a>
               <div class="city-select__contact">
                 <i class="icon">
                   <svg class="icon__svg">
@@ -91,13 +92,13 @@
               </div>
             </div>
             <div class="head__auth">
-              <a href="" class="head__login">
+              <a href="#auth" class="head__login">
                 <i class="icon">
                   <svg class="icon__svg icon__svg--auth">
                     <use xlink:href="img/sprite.svg#icon-login"></use>
                   </svg>
                 </i> Вход </a>
-              <a href="" class="head__reg">
+              <a href="#reg" class="head__reg">
                 <i class="icon">
                   <svg class="icon__svg icon__svg--auth">
                     <use xlink:href="img/sprite.svg#icon-reg"></use>
@@ -127,7 +128,7 @@
         </div>
       </div>
     </section>
-    <section class="top">
+    <section class="top" data-sticky-container data-sticky-wrap data-sticky-class="is-sticky">
       <div class="container">
         <div class="top__wrap">
           <div class="top__catalog">
@@ -178,14 +179,341 @@
         <div class="cart__wrap">
           <div class="cart__left">
             <!-- BEGIN content -->
+            <div class="cart__table">
+              <div class="overflow">
+                <table class="stable">
+                  <thead>
+                    <tr>
+                      <td class="stable__img"></td>
+                      <td>Артикул</td>
+                      <td>Товар</td>
+                      <td>Цена</td>
+                      <td>Количество</td>
+                      <td>Стоимость</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td class="stable__img">
+                      <a href="#">
+                        <img src="img/content/img.jpg" />
+                      </a>
+                    </td>
+                    <td>И00412</td>
+                    <td class="stable__product">
+                      <a href="" class="stable__title">Вискоза блузочная</a>
+                      <div class="stable__remain">Доступно 63.1 м.</div>
+                    </td>
+                    <td>
+                      <div class="stable__cprice">
+                        <div class="stable__cprice-old">221.26 руб</div>
+                        <div class="stable__cprice-sale">-5%</div>
+                        <div class="stable__cprice-price">210.2 руб</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="count count--cart">
+                        <button class="count__btn">-</button>
+                        <input type="text" class="count__count" value="1.0" />
+                        <button class="count__btn">+</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="stable__cprice">
+                        <div class="stable__cprice-old">221.26 руб</div>
+                        <div class="stable__cprice-sale">-5%</div>
+                        <div class="stable__cprice-price">210.2 руб</div>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="#" class="stable__sample">Хочу образец</a>
+                    </td>
+                    <td>
+                      <a href="#" class="btn-trash">
+                        <svg class="btn-trash__icon">
+                          <use xlink:href="img/sprite.svg#icon-trash"></use>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="stable__img">
+                      <a href="#">
+                        <img src="img/content/img.jpg" />
+                      </a>
+                    </td>
+                    <td>И00412</td>
+                    <td class="stable__product">
+                      <a href="" class="stable__title">Вискоза блузочная блузочная блузочная</a>
+                      <div class="stable__remain">Доступно 63.1 м.</div>
+                    </td>
+                    <td>
+                      <div class="stable__cprice">
+                        <div class="stable__cprice-price">210.2 руб</div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="count count--cart">
+                        <button class="count__btn">-</button>
+                        <input type="text" class="count__count" value="1.0" />
+                        <button class="count__btn">+</button>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="stable__cprice">
+                        <div class="stable__cprice-price">210.2 руб</div>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="#" class="stable__sample">Хочу образец</a>
+                    </td>
+                    <td>
+                      <a href="#" class="btn-trash">
+                        <svg class="btn-trash__icon">
+                          <use xlink:href="img/sprite.svg#icon-trash"></use>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="cart__sample">
+              <div class="cart__subtitle">Образцы тканей</div>
+              <div class="overflow">
+                <table class="stable">
+                  <thead>
+                    <tr>
+                      <td class="stable__img"></td>
+                      <td>Артикул</td>
+                      <td>Товар</td>
+                      <td>Стоимость</td>
+                      <td></td>
+                    </tr>
+                  </thead>
+                  <tr>
+                    <td class="stable__img">
+                      <a href="#">
+                        <img src="img/content/img.jpg" />
+                      </a>
+                    </td>
+                    <td>И00412</td>
+                    <td class="stable__product">
+                      <a href="" class="stable__title">Вискоза блузочная</a>
+                    </td>
+                    <td>
+                      <div class="stable__cprice">
+                        <div class="stable__cprice-price">Бесплатно</div>
+                      </div>
+                    </td>
+                    <td>
+                      <a href="#" class="btn-trash">
+                        <svg class="btn-trash__icon">
+                          <use xlink:href="img/sprite.svg#icon-trash"></use>
+                        </svg>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="cart__all">
+              <div class="cart__total">
+                <div class="cart__total-old">Сумма:
+                  <span>863,78</span> руб.</div>
+                <div class="cart__total-sale">Скидка:
+                  <span>-5</span>%</div>
+                <div class="cart__total-price">Итого:
+                  <span>819,8</span> руб</div>
+              </div>
+              <div class="cart__order">
+                <a href="#" class="btn btn--inline btn--bold">Оформить заказ</a>
+              </div>
+            </div>
             <!-- END content -->
           </div>
           <div class="cart__right">
-            <div class="cright"> </div>
+            <div class="cright">
+              <div class="cright__sale">
+                <div class="cright__sale-title">Персональная скидка</div>
+                <div class="cright__sale-count">5%</div>
+              </div>
+              <div class="cright__about">
+                <p>Общая стоимость товаров в корзине</p>
+                <div class="cright__price">819,8 руб</div>
+              </div>
+              <a href="#" class="btn btn--center btn--bold">Оформить заказ</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
+    <div class="remodal" data-remodal-id="select-city">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal__title">Выбор города</div>
+      <div class="remodal__content">
+        <div class="remodal__city">
+          <ul class="remodal__list">
+            <li class="remodal__item">
+              <a href="#">Москва</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Ижевск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Киров</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Санкт Петербург</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Нижний Новгород</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Тюмень</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Челябинск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Омск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Москва</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Ижевск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Киров</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Санкт Петербург</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Нижний Новгород</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Тюмень</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Челябинск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Омск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Москва</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Ижевск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Киров</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Санкт Петербург</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Нижний Новгород</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Тюмень</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Челябинск</a>
+            </li>
+            <li class="remodal__item">
+              <a href="#">Омск</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="remodal__footer">
+        <i class="remodal__ficon">
+          <svg class="remodal__svg">
+            <use xlink:href="img/sprite.svg#icon-box"></use>
+          </svg>
+        </i>
+        <span>Доставляем заказы быстро и качественно</span>
+      </div>
+    </div>
+    <div class="remodal remodal--min" data-remodal-id="auth">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal__title">Вход</div>
+      <div class="remodal__content">
+        <form action="#" class="form">
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Логин</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Пароль</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group form__group--center">
+            <button type="submit" class="form__btn">Войти</button>
+          </div>
+        </form>
+      </div>
+      <div class="remodal__footer remodal__footer--center">
+        <span>Отправляя форму вы соглашаетесь с
+          <a href="#">Политикой конфиденциальности</a>
+        </span>
+      </div>
+    </div>
+    <div class="remodal remodal--min" data-remodal-id="reg">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal__title">Регистрация</div>
+      <div class="remodal__content">
+        <form action="#" class="form">
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Логин</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Email</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group form__group--center">
+            <a href="#repass" class="form__repass">Забыли пароль?</a>
+            <button type="submit" class="form__btn">Регистрация</button>
+          </div>
+        </form>
+      </div>
+      <div class="remodal__footer remodal__footer--center">
+        <span>Отправляя форму вы соглашаетесь с
+          <a href="#">Политикой конфиденциальности</a>
+        </span>
+      </div>
+    </div>
+    <div class="remodal remodal--min" data-remodal-id="repass">
+      <button data-remodal-action="close" class="remodal-close"></button>
+      <div class="remodal__title">Восстановление пароля</div>
+      <div class="remodal__content">
+        <form action="#" class="form">
+          <div class="form__group">
+            <div class="form__label">
+              <label for="">Email</label>
+            </div>
+            <input type="text" class="form__input" /> </div>
+          <div class="form__group form__group--center">
+            <a href="#auth" class="form__repass">Вход</a>
+            <button type="submit" class="form__btn">Отправить</button>
+          </div>
+        </form>
+      </div>
+      <div class="remodal__footer remodal__footer--center">
+        <span>Отправляя форму вы соглашаетесь с
+          <a href="#">Политикой конфиденциальности</a>
+        </span>
+      </div>
+    </div>
     <section class="footer">
       <div class="container">
         <div class="footer__wrap">

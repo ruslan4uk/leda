@@ -1,11 +1,11 @@
 .head
-    position: fixed
-    z-index: 10
     width: 100%
     background: #f7f7f7
     padding: 1rem 0
     box-shadow: 0 0 0 0 rgba(0,0,0,.1)
     +tr(box-shadow ease 0.2s)
+    &__sticky
+        z-index: 2
     &__wrap
         display: flex
         align-items: center
@@ -25,7 +25,7 @@
             background: $linkBlue
     &__logo
         max-width: 4.25rem
-        +rmin($xs)
+        +rmin($sm)
             max-width: 7rem
         line-height: 0
         &:hover
@@ -64,7 +64,7 @@
         +rmin($sm)
             display: none
     &__shadow
-        box-shadow: 0 0 15px 2px rgba(0,0,0,.1)
+        box-shadow: 0 0 15px 3px rgba(0,0,0,.15)
     
 .city-select
     position: relative
@@ -75,6 +75,7 @@
         +rmin($sm)
             display: none
     &__select
+        display: block
         color: $linkBlue
         text-decoration: underline
         cursor: pointer
