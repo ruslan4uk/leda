@@ -67,6 +67,8 @@
     "webpack-glsl-loader": "^1.0.1"
   },
   "dependencies": {
+    "@fancyapps/fancybox": "^3.3.5",
+    "fancybox": "^3.0.1",
     "jquery-sticky": "^1.0.4",
     "owl.carousel": "^2.3.4",
     "remodal": "^1.1.1",

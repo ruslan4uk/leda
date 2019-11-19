@@ -19,55 +19,6 @@
     &__text
         color: #38454a
         font-family: 'MuseoBold'
-
-/* content */
-.content
-    &__wrap
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-between
-        margin: 3.5rem 0
-    &__col
-        width: 100%
-        &--2col
-            width: 100%
-            +rmin($md)
-                width: calc(50% - 2rem)
-
-    &__list
-        display: flex
-        flex-wrap: wrap
-        justify-content: space-between
-        margin: 1rem 0
-    &__item
-        width: 100%
-        padding-left: 1.5rem
-        position: relative
-        margin: 1rem 0
-        +rmin($xs)
-            width: calc(50% - 1rem)
-        +rmin($md)
-            width: calc(25% - 1rem)
-        &:after
-            position: absolute
-            top: 0.325rem
-            left: 0
-            content: ' '
-            width: 12px
-            height: 12px
-            background: $btn
-            border-radius: 50%
-            border: 3px solid #ffffff
-            box-shadow: 0 0 15px 0 $btn
-
-    &__title
-        font-size: 1.563rem
-        margin-bottom: 1.5rem
-    &__subtitle
-        font-size: 1.25rem
-        margin-bottom: 1.25rem
-    &__bold
-        font-family: 'MuseoMedium'
     
 
 /* main-product */

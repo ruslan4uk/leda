@@ -254,6 +254,7 @@
               </a>
               <div class="fcart__hr"></div>
               <a href="" class="fcart__btn fcart__btn--cart">
+                <div class="fcart__count">3</div>
                 <i>
                   <svg class="fcart__icon">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -288,6 +289,7 @@
               </a>
               <div class="fcart__hr"></div>
               <a href="" class="fcart__btn fcart__btn--cart">
+                <div class="fcart__count">3</div>
                 <i>
                   <svg class="fcart__icon">
                     <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -408,9 +410,9 @@
                 <div class="product__remain">Доступно к заказу: 98.3 м.</div>
                 <div class="product__count">
                   <div class="count">
-                    <button class="count__btn">-</button>
-                    <input type="text" class="count__count" value="1.0" />
-                    <button class="count__btn">-</button>
+                    <button class="count__btn count__btn--prev" data-multi="-0.1">-</button>
+                    <input type="text" class="count__count" value="1.0" data-max="93.8" data-step="0.1" />
+                    <button class="count__btn count__btn--next" data-multi="0.1">+</button>
                   </div>
                 </div>
                 <div class="product__fcart">

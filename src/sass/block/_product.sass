@@ -35,6 +35,7 @@
     &__price
         color: $text
         &--old 
+            color: #d80229
             & span
                 text-decoration: line-through
         & span 
@@ -55,6 +56,17 @@
             display: none !important
     &__cnav
         margin-bottom: 0.75rem
+    &__thumb-list
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        &:after 
+            content: ""
+            flex: 1 1 100%
+            max-width: 25%
+    &__thumb
+        width: calc(25% - 0.25rem)
+        
 
     
 .pch
@@ -66,3 +78,27 @@
             color: $text
             font-family: 'MuseoMedium'
 
+
+.remote-warehouse
+    position: relative 
+    &--product 
+        display: block
+        margin-bottom: 5px
+        & img 
+            display: block
+    &__inline
+        position: absolute
+        right: 0
+        top: 0
+        background-color: rgba(0,0,0,.65)
+        padding: 0.5rem 1rem
+        color: #ffffff
+        &--cart 
+            font-size: 0.75rem
+            width: 100%
+            text-align: center
+            padding: 0.25rem
+.red
+    color: #d80228 !important
+    &:hover
+        text-decoration: underline

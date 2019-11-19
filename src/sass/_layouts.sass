@@ -46,9 +46,14 @@ p
     line-height: 1.375rem
     margin-bottom: 1rem
 
+button 
+    background: none
+
 .overflow
     max-width: 100%
     overflow-x: scroll
+    +rmin($md)
+        overflow-x: auto
 
 .icon
     margin-right: 0.5rem
@@ -73,6 +78,19 @@ p
     line-height: 1.3
     margin-bottom: 1rem
     font-family: 'MuseoBold'
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        align-items: baseline
+    &__wrap & 
+        margin-right: 0.5rem
+    &__count
+        font-size: 1.25rem
+        margin-left: 0.75rem
+        font-family: 'MuseoMedium'
+        margin-left: 0
+        margin-bottom: 1rem
+        margin-top: -0.5rem
 .subtitle
     font-size: 1.25rem
     margin-bottom: 1.25rem
@@ -200,6 +218,10 @@ p+img
         font-family: 'MuseoMedium'
         &--sale 
             background-image: url(../img/sticker.svg)
+        &--new 
+            background-image: url(../img/sticker-new.svg)
+        &--raspr 
+            background-image: url(../img/sticker-sale.svg)
 
 
 /* fcart */
@@ -236,6 +258,26 @@ p+img
             fill: #ffffff
             &:hover
                 background: $btnHover
+    &__count
+        position: absolute
+        top: 0.25rem
+        left: 0.25rem
+        background: #d80228 
+        border-radius: 50% 50%
+        padding: 0.125rem
+        color: #ffffff
+        font-size: 0.625rem
+        line-height: 0.625rem
+        width: 1.25rem
+        height: 1.25rem
+        display: flex
+        justify-content: center
+        align-content: center
+        align-items: center
+        &--msfavorites
+            display: none
+        &--show 
+            display: flex
     &__hr
         width: 1px
         height: 1.5rem
@@ -249,6 +291,7 @@ p+img
         margin-bottom: 0.125rem
         margin-left: 0.5rem
         white-space: nowrap
+        min-width: 5rem
 
 /* btn */
 .btn
@@ -306,23 +349,72 @@ p+img
         height: 1.5rem
         fill: #c02323
 
+
+/* Order */
+.order
+    & h3 
+        padding-bottom: 1rem
+    &__row
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__left, &__right
+        width: 100%
+        +rmin($sm)
+            width: calc(50% - 2rem)
+    &__btn-right
+        display: flex
+        justify-content: flex-end
+
 /* Form */
 .form
     &__group
-        margin-bottom: 1.5rem
+        margin-bottom: 1rem
         width: 100%
         max-width: 30rem
         &--center 
             text-align: center
+        &--ma 
+            margin: 0 auto
+        
+    &__col
+        display: flex
+        justify-content: space-between
+        width: 100%
+        max-width: 30rem
+    &__col &__group
+        max-width: 100%
+        margin-right: 1rem
+        &:last-child
+            margin-right: 0
+    &__help
+        font-size: 0.875rem
+    &__error
+        color: red 
+        font-size: 0.875rem
+        margin-bottom: 0.25rem
+    &__good
+        font-size: 0.875rem
+        color: green     
     &__label
         font-size: 0.875rem
         width: 100%
         margin-bottom: 0.125rem
-    &__input[type="text"]
+    &__input[type="checkbox"] 
+        width: 1rem
+        height: 1rem
+    &__input[type="text"], &__input[type="phone"],
+    &__input[type="email"], &__input[type="password"],
+    &__textarea
         font-size: 1rem
         padding: 0.5rem 0.5rem
         border: 1px solid #cecece
         width: 100%
+    &__link
+        color: $btn
+        text-decoration: underline
+        font-family: "MuseoMedium"
+        cursor: pointer
     &__btn
         background: $btn
         color: #ffffff
@@ -333,6 +425,9 @@ p+img
     &__repass
         margin-right: 2rem
         color: $linkBlue
+    &__check-error
+        color: red
+        margin-top: 0.5rem
 
 /* list */
 .list
@@ -374,6 +469,11 @@ p+img
 
 /* Table */
 .stable
+    &__flex-center
+        display: flex
+        align-items: center
+        align-content: center
+        justify-content: center
     & thead
         border-bottom: 1px solid #cccccc
         & td 
@@ -421,6 +521,9 @@ p+img
         color: $linkBlue
         &:hover
             color: $link
+        &--button
+            display: block !important
+            font-size: 0.875rem !important
 
 /* count */
 .count
@@ -429,13 +532,15 @@ p+img
     +rmin($sm)
         justify-content: flex-start
     &--cart 
-        justify-content: center
+        justify-content: center !important
+        align-items: center
     &__btn
         background: #ededed
         padding: 0.75rem 1rem
         font-size: 1rem
         line-height: 1
         display: inline-block
+        cursor: pointer
         +rmin($sm)
             flex-grow: 0
     &__count
@@ -444,7 +549,7 @@ p+img
         font-size: 1rem
         line-height: 1
         text-align: center
-        max-width: 4rem
+        max-width: 5.5rem
      
     &--cart &__btn
         background: transparent
@@ -452,11 +557,11 @@ p+img
         font-size: 1rem
         font-family: 'MuseoBold'
     &--cart &__count
-        background: #ffffff
-        padding: 0.5rem 0.875rem
-        font-size: 0.875rem
-        width: 3rem
-        border: 1px solid #cccccc
+        background: #fff
+        padding: .5rem .25rem
+        font-size: .875rem
+        width: 3.5rem
+        border: 1px solid #ccc
 
 
 /* remodal */
@@ -464,7 +569,7 @@ p+img
     padding: 1.5rem 1.75rem 0.75rem
     text-align: left
     &--min 
-        max-width: 500px
+        max-width: 500px !important
     &-close 
         left: auto
         right: 1rem
@@ -604,3 +709,260 @@ p+img
             color: $linkBlue
 
 
+/* content */
+.content
+    &__wrap
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        margin: 3.5rem 0
+    &__col
+        width: 100%
+        &--2col
+            width: 100%
+            +rmin($md)
+                width: calc(50% - 2rem)
+
+    & ol 
+        margin-bottom: 1rem
+        margin-left: 3rem
+        & li 
+            list-style-type: decimal
+            margin: 0.5rem 0
+
+    & ul
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        //margin: 1rem 0
+        margin-bottom: 1rem
+        & li
+            width: 100%
+            padding-left: 1.5rem
+            position: relative
+            margin: 0.5rem 0
+            // +rmin($xs)
+            //     width: calc(50% - 1rem)
+            // +rmin($md)
+            //     width: calc(25% - 1rem)
+            &:after
+                position: absolute
+                top: 0.325rem
+                left: 0
+                content: ' '
+                width: 12px
+                height: 12px
+                background: $btn
+                border-radius: 50%
+                border: 3px solid #ffffff
+                box-shadow: 0 0 15px 0 $btn
+    & ul.seo 
+        margin: 1rem 0
+        & li 
+            +rmin($xs)
+                width: calc(50% - 1rem)
+            +rmin($md)
+                width: calc(25% - 1rem)
+
+    & h1 
+        font-size: 1.75rem
+        margin-bottom: 1.5rem
+        font-family: 'MuseoMedium'
+    & h2
+        font-size: 1.563rem
+        margin-bottom: 1.5rem
+        font-family: 'MuseoMedium'
+    & h3
+        font-size: 1.25rem
+        margin-bottom: 1.25rem
+        font-family: 'MuseoMedium'
+    & h4 
+        font-size: 1.125rem
+        margin-bottom: 1.125rem
+        font-family: 'MuseoMedium'
+    & h5 
+        font-size: 1rem
+        margin-bottom: 1rem
+        font-family: 'MuseoMedium'
+    & h6 
+        font-size: 0.875rem
+        margin-bottom: 0.875rem
+        font-family: 'MuseoMedium'
+    & strong
+        font-family: 'MuseoMedium'
+
+#msMiniCart 
+    display: flex
+    height: 100%
+
+.ac-ajax
+    position: absolute
+    max-height: 40vh
+    overflow-y: scroll
+    z-index: 9
+    background: #fff
+    box-shadow: 0 0 5px 1px rgba(0,0,0,0.1)
+    width: 100%
+
+.ac
+    padding: 1rem
+    border-bottom: 1px solid #ccc
+    display: block
+    &__row
+        display: flex
+        align-items: center
+    & img 
+        display: block
+        margin-right: 1rem
+        max-width: 3rem
+        +rmin($sm)
+            max-width: auto 
+    &__descr
+        font-size: 0.875rem
+
+
+// history
+.history
+    margin-top: 1rem
+    border-top: 1px solid #cccccc
+    padding-top: 1rem
+    &__row
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+    &__col
+        +rmin($md)
+            border-right: 1px solid #cccccc
+            padding-right: 1rem
+            width: 50%
+            &:last-child
+                border-right: 0
+                padding-left: 1rem
+    &__title
+        margin-bottom: 1rem
+
+.scroll-top
+    display: none
+    +tr(opacity ease 0.3s)
+    +rmin($sm)
+        display: block
+        background: $btn
+        padding: 0.25rem 0.5rem 0 0.5rem
+        position: fixed
+        bottom: 0
+        right: 20px
+        width: 2.5rem
+        cursor: pointer
+        z-index: 9
+        &:hover
+            background: $btnHover
+
+
+.alertify-notifier
+    display: none
+.alertify-notifier.ajs-top
+    top: auto !important
+    bottom: 1rem
+    z-index: 999999999
+
+// select custom
+$select-width: 100%
+$select-height: 2.25rem
+
+.select-hidden
+    display: none
+    visibility: hidden
+    padding-right: 10px
+
+.select 
+    cursor: pointer
+    display: block
+    position: relative
+    font-size: 1rem
+    color: #333333
+    width: $select-width
+    height: $select-height
+
+.select-styled 
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background: #ffffff
+    border: 1px solid #cccccc
+    padding: 0.5rem
+    +tr(all 0.2s ease-in)
+    &:after 
+        content: ""
+        width: 0
+        height: 0
+        border: 7px solid transparent
+        border-color: #333333 transparent transparent transparent
+        position: absolute
+        top: 0.875rem
+        right: 10px
+    &:hover
+        background-color: #eeeeee
+  
+    &:active, &.active 
+        background-color: #eeeeee
+        &:after 
+            top: 0.375rem
+            border-color: transparent transparent #333333 transparent
+
+.select-options 
+    display: none 
+    position: absolute
+    top: 100%
+    right: 0
+    left: 0
+    z-index: 999
+    margin: 0
+    padding: 0
+    list-style: none
+    background-color: #ffffff
+    li 
+        margin: 0
+        padding: 0.5rem
+        text-indent: 0.5rem
+        border-top: 1px solid #eeeeee
+        +tr(all 0.15s ease-in)
+        &:hover 
+            color: #333333
+            background: #eeeeee
+    
+    &[rel="hide"] 
+        display: none
+
+.hidden
+    display: none !important
+
+.msfavorites
+    &__btn-right
+        display: flex
+        justify-content: flex-end
+
+.fancybox-bg
+    background: rgba(179, 179, 179, 0.66) !important
+
+.mobile-nav
+    display: none
+    padding: 0 10px
+    &--opened
+        display: block
+        +rmin($sm)
+            display: none
+
+// Review
+.review
+    &__head
+        padding: 1rem
+        margin-bottom: 1rem
+        background: #409bd5
+        color: #fff
+    &__item
+        display: flex
+        font-size: 1.125rem
+        align-items: center
+        font-family: MuseoMedium

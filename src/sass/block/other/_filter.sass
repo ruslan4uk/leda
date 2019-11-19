@@ -42,11 +42,14 @@
         font-size: 0.875rem
         padding: 0.5rem
         cursor: pointer
+        +rmin($md)
+            cursor: default
     &__sbtn
         padding: 0.75rem 1.5rem 
         background: #edf2f5
         font-size: 0.875rem
         width: 100%
+        cursor: pointer
         +rmin($md)
             padding: 0.5rem 2rem
             margin-left: 1.5rem
@@ -90,6 +93,7 @@
     &__fitem
         width: 50%
         padding: 0.5rem
+        position: relative
         +rmin($md)
             width: calc(33%)
         +rmin($lg)
@@ -98,3 +102,43 @@
 
     &__is-open
         display: flex
+
+    &__ptitle
+        font-size: 0.875rem
+        padding: 0.5rem 0.75rem
+        background: #ffffff
+        border: 1px solid #cccccc
+        display: block
+        &:hover, &:focus, &.active
+            background: $btn
+            color: #ffffff
+
+
+    &__plist
+        display: none
+        border-left: 1px solid #cccccc
+        border-right: 1px solid #cccccc
+        border-bottom: 1px solid #cccccc
+        max-height: 16rem
+        overflow-y: scroll
+        position: absolute
+        width: calc(100% - 16px)
+        background: #fcfcfc
+        z-index: 2
+    &__pitem.active a
+            color: #ffffff
+            background: $btnHover
+    &__plink
+        padding: 0.5rem 0.75rem
+        display: block
+        font-size: 0.875rem
+        border-bottom: 1px solid #dddddd
+        &:hover
+            color: #ffffff
+            background: $btnHover
+
+
+    &__ptitle:focus ~ &__plist,
+    &__plist:hover
+        display: block
+    
