@@ -21,7 +21,7 @@ Reference: http://jsfiddle.net/BB3JK/47/
 
 $('.select-custom').each(function() {
   var $this = $(this), numberOfOptions = $(this).children('option').length;
-  $this.addClass('select-hidden'); 
+  $this.addClass('select-hidden');
   $this.wrap('<div class="select"></div>');
   $this.after('<div class="select-styled"></div>');
   var $styledSelect = $this.next('div.select-styled');
@@ -96,8 +96,8 @@ $('[data-remodal-id=order]').remodal(options);
 //     else if ($(this).val() < min)
 //     {
 //       $(this).val(min);
-//     }       
-//   }); 
+//     }
+//   });
 // });
 
 // $('#msCart input[name="count"], #msCart .count__btn' ).on('click change', function() {
@@ -152,6 +152,9 @@ $('.filter__sbtn').on('click touchend', function() {
 // Main carousel
 var slider = $('.slider__carousel');
 slider.owlCarousel({
+  autoplay:true,
+  autoplayTimeout:3000,
+  autoplayHoverPause:true,
   loop:true,
   margin:10,
   nav:false,
@@ -208,8 +211,8 @@ $(window).on('resize load', function() {
 });
 
 
-// Head fixed 
-$(window).scroll(function() {    
+// Head fixed
+$(window).scroll(function() {
   var scroll = $(window).scrollTop();
   if (scroll >= 120) {
     $('.head, .top').addClass('head__shadow');
